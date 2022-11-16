@@ -49,9 +49,7 @@ class _BudgetFormState extends State<BudgetForm> {
                         child: TextFormField(
                           decoration: InputDecoration(
                             hintText: "Judul",
-                            labelText: "Judul Keperluan",
-                            // Menambahkan ikon agar interface lebih intuitif
-                            // icon: const Icon(Icons.title),
+                            labelText: "Judul",
                             // Menambahkan circular border agar lebih rapi
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8.0),
@@ -82,8 +80,6 @@ class _BudgetFormState extends State<BudgetForm> {
                           decoration: InputDecoration(
                             hintText: "Rp",
                             labelText: "Nominal",
-                            // Menambahkan icon agar lebih intuitif
-                            // icon: const Icon(Icons.money),
                             // Membuat border menjadi rounded agar lebih rapi
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8.0),
@@ -98,13 +94,13 @@ class _BudgetFormState extends State<BudgetForm> {
                               budgetNominal = int.parse(value!);
                             });
                           },
-                          // Menambahkan behavior saat data disimpan
+                          // Menyimpan value dalam bentuk integer
                           onSaved: (String? value) {
                             setState(() {
                               budgetNominal = int.parse(value!);
                             });
                           },
-                          // Validator sebagai validasi form
+                          // validasi form
                           validator: (String? value) {
                             if (value == null ||
                                 value.isEmpty ||
@@ -117,14 +113,16 @@ class _BudgetFormState extends State<BudgetForm> {
                     Container(
                         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         decoration: BoxDecoration(
-                            color: Colors.grey, borderRadius: BorderRadius.circular(10)),
+                            color: Colors.white, borderRadius: BorderRadius.circular(10)),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               DropdownButton(
                                 hint: const Text("Pilih Jenis"),
                                 value: type,
-                                icon: const Icon(Icons.keyboard_arrow_down),
+                                icon: const Icon(Icons.arrow_drop_down),
+                                iconSize: 32,
+                                underline: SizedBox(),
                                 items: listType.map((String items) {
                                   return DropdownMenuItem(
                                     value: items,
@@ -138,9 +136,6 @@ class _BudgetFormState extends State<BudgetForm> {
                                 },
                               ),
                             ],
-                            // icon: Icon(Icons.arrow_drop_down),
-                            // iconSize: 42,
-                            // underline: SizedBox(),
                         )
                     ),
                     const Spacer(),

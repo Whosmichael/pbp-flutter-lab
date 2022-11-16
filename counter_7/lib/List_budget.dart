@@ -26,15 +26,7 @@ class _BudgetListState extends State<BudgetList>{
         myBudgetList: widget.myBudgetList,
       ),
       body: Column(
-        children: [ if (widget.myBudgetList == null)
-          const Center(
-            child: Text("Data Kosong"),
-          )
-        else if (widget.myBudgetList.isEmpty)
-            const Center(
-              child: Text("Data Kosong"),
-            )
-          else
+        children: [
             Expanded(
                 child: ListView.builder(
                     itemCount: widget.myBudgetList.length,

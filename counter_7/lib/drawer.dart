@@ -20,11 +20,11 @@ class _AppDrawerState extends State<AppDrawer>{
     return Drawer(
       child: Column(
         children: [
-          // Menambahkan clickable menu
+          // Menambahkan  menu
           ListTile(
             title: const Text('Counter'),
             onTap: () {
-              // Route menu ke halaman utama
+              // wiring menu ke halaman utama
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const MyHomePage(title: "Program Counter",)),
@@ -34,7 +34,7 @@ class _AppDrawerState extends State<AppDrawer>{
           ListTile(
             title: const Text('Tambah Budget'),
             onTap: () {
-              // Route menu ke halaman form
+              // wiring menu ke halaman form
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const BudgetForm(title: "Form Budget",)),
@@ -44,7 +44,7 @@ class _AppDrawerState extends State<AppDrawer>{
           ListTile(
             title: const Text('Data Budget'),
             onTap: () {
-              // Route menu ke halaman form
+              // wiring menu ke halaman form
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => BudgetList( myBudgetList: widget.myBudgetList,)),
