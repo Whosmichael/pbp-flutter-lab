@@ -1,0 +1,25 @@
+# Yang dimaksud dengan stateless Widget & Stateful Widget
+Stateless widget adalah widget statis, dimana seluruh konfigurasinya telah diinisiasi sejak awal
+Stateful widget adalah widget dinamis, yang dapat diperbaharui kapanpun sesuai kebutuhan dari user
+
+# Widget yang dipakai dalam Project ini dan fungsinya
+- Row & Column, untuk  membuat tata letak yang fleksibel baik dalam arah horizontal (menyamping kanan atau kiri) untuk row dan vertikal (atas atau bawah) untuk column. Desain objek ini didasarkan pada model tata letak flexbox web.
+- Text untuk mendisplay teks dengan berbagai style sesuai kebutuhan
+- Scaffold untuk memberikan tema material yang menjadi dasar dari tampilan interface. Scaffold akan memberikan material pada widget atau children yang terdapat di dalam scaffold.
+- MaterialApp untuk menjadi starting point dari app yang ingin dibuat. Berguna untuk membuat material design. MaterialApp bersifat predefined.
+- FloatingActionButton, untuk menjalankan berbagai aksi seperti, create, navigate, add, share, saat dilakukan onpressed.
+- AppBar, untuk bar yang ada di atas layar
+- Padding, Widget untuk memberi spasi di sekitar child widget
+
+# Fungsi dari ```setState()```
+Untuk memberikan notifikasi pada framework bahwa telah terjadi perubahan data dan widget yang ada pada built context harus di rebuild
+
+# Perbedaan `const` dan `final`
+Const digunakan untuk mendeklarasikan variabel immutable yang bersifat konstan dan harus sudah diketahui value nya saat compile time dilakukan yang artinya harus sudah diberi value secara langsung,
+sedangkan Final digunakan untuk deklarasi vaiabel dan akan diinisiasi saat pertama kali digunakan dan nilai final nya akan diketahui pada saat runtime.
+
+# Cara mengimplementasi checklist
+- Menginisasi app dengan flutter create counter_7
+- Menaruh dua Floatingactionbutton dalam satu row sebagai pengganti default
+- Menggunakan if else untuk melakukan set terhadap onPressed floatingactionbutton minus dan menghilangkan tombol - apabila nilai counter 0
+- Melakukan rendering genap atau ganjil menggunakan if/else condition dan mengganti warna dengan textstyle
