@@ -50,3 +50,31 @@ Container, Widget yang berperan untuk menyimpan widget lainnya
 - Membuat list pada form_budget 
 - Membuat budget list sebagai tempat dari budget yang diinput
 - Menggunakan itembuilder untuk me-render semua item pada list budget
+
+
+# Tugas 8
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Sebenarnya bisa saja, namun tidak direkomendasikan. Dengan menggunakan model, kita akan mendapatkan data yang lebih terstruktur sehingga akan lebih mudah diakses dan kita dapat menentukan tipe datanya dengan lebih mudah.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+Expanded : Membuat space kosong antar elemen
+ListView : Agar dapat menampilkan children widget yang ada di dalam sebuah list (dalam hal ini menampilkan data movie)
+EdgeInsets : untuk set outer atau inner padding yang disesuaikan dengan kebutuhan
+CheckBox : Membuat form boolean dengan checkbox untuk mengubah status watched
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Membuat model dari json dengan menggunakan quicktype. Link json yang ada diletakkan pada method ```fetchMywatchlist()```  untuk fetching data dan dapat diconvert sesuai bentuk yang dibutuhkan.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas
+
+Pada Drawer menambah button untuk navigasi ke halaman mywatchlist
+Membuat model MyWatchList dari QuickType agar mudah, kemudian membuat file .dart nya di dalam folder model
+Membuat file mywatchlist.dart untuk menampilkan data-data tersebut nantinya
+Fetching data JSON dari link json heroku, kemudian mengconvert ke bentuk objek MyWatchList
+Menampilkan data-data yg didapat dengan menggunakan ListView
+Membuat file watchlistDetail untuk menampilkan page yg berisi detail dari film dan button untuk kembali ke halaman watchlist
+Untuk detail menambahkan event onTap, jika card movie diklik maka akan routing ke halaman yang berisi detail dari movie tersebut
+Untuk bonus menambahkan checkbox yang dapat mengubah status watched
