@@ -1,7 +1,7 @@
 import 'package:counter_7/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:counter_7/budget.dart';
+import 'package:counter_7/Model/budget.dart';
 
 class BudgetForm extends StatefulWidget {
   const BudgetForm({super.key, required this.title});

@@ -1,8 +1,10 @@
-import 'package:counter_7/budget.dart';
+import 'package:counter_7/Model/budget.dart';
 import 'package:counter_7/List_budget.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/Form_budget.dart';
 import 'package:counter_7/main.dart';
+import 'package:counter_7/mywatchlist.dart';
+
 
 class AppDrawer extends StatefulWidget {
   late List<Budget> myBudgetList;
@@ -48,6 +50,16 @@ class _AppDrawerState extends State<AppDrawer>{
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => BudgetList( myBudgetList: widget.myBudgetList,)),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('My Watch List'),
+            onTap: () {
+              // wiring menu ke halaman watchlist
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const WatchlistPage()),
               );
             },
           ),
