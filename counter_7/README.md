@@ -52,7 +52,7 @@ Container, Widget yang berperan untuk menyimpan widget lainnya
 - Menggunakan itembuilder untuk me-render semua item pada list budget
 
 
-# Tugas 8
+# Tugas 9
 
 ## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
 
